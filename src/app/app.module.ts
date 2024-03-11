@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { MemesComponent } from './memes/memes.component';
 import { ShimmerComponent } from './shimmer/shimmer.component';
 import { MemesBodyComponent } from './memes-body/memes-body.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MemesComponent,
     ShimmerComponent,
-    MemesBodyComponent
+    MemesBodyComponent,
+    AboutUsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
