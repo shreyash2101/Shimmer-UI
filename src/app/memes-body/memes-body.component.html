@@ -1,9 +1,7 @@
-<div class="d-flex flex-wrap">
-  <div
-    class="p-2 m-4 border border-1 border-dark rounded"
-    *ngFor="let memes of memesData?.memes"
-  >
-    <img style="width: 128px; height: 128px" [src]="memes.url" alt="" />
-    <p>{{ memes.author }}</p>
-  </div>
+<div
+  class="p-2 m-4 border border-1 border-dark rounded"
+  *ngFor="let memes of memesData"
+>
+  <img style="width: 128px; height: 128px" [src]="memes.url" alt="" />
+  <p>{{ memes.author }}</p>
 </div>

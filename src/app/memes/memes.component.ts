@@ -1,23 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { MemesService } from '../memes.service';
 
 @Component({
   selector: 'app-memes',
   templateUrl: './memes.component.html',
   styleUrl: './memes.component.scss',
+  host: {
+    style: 'display: contents',
+  },
 })
 export class MemesComponent implements OnInit {
   memesCount = 28;
-  memesData: any;
-  isLoading = true;
+  memesData: Array<any> = [];
+  showShimmer = false;
+  constructor(private memesService: MemesService) {}
   ngOnInit(): void {
-    this.fetchMemes().then(() => {
-      this.isLoading = false;
-    });
+    this.fetchMemes();
   }
 
-  fetchMemes = async () => {
-    const data = await fetch(`https://meme-api.com/gimme/${this.memesCount}`);
-    this.memesData = await data.json();
-    console.log(this.memesData);
+  @HostListener('document:scroll', ['$event'])
+  public handleScroll() {
+    if (window.scrollY + window.innerHeight >= document.body.scrollHeight) {
+      this.fetchMemes();
+    }
+  }
+
+  fetchMemes = () => {
+    this.showShimmer = true;
+    this.memesService.fetchMemes(this.memesCount).subscribe({
+      next: (resp: any) => {
+        this.memesData = [...this.memesData, ...resp['memes']];
+        this.showShimmer = false;
+      },
+    });
   };
 }

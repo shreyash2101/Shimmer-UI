@@ -8,6 +8,7 @@ import { ShimmerComponent } from './shimmer/shimmer.component';
 import { MemesBodyComponent } from './memes-body/memes-body.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,10 @@ import { LoginComponent } from './login/login.component';
     ShimmerComponent,
     MemesBodyComponent,
     AboutUsComponent,
-    LoginComponent
+    LoginComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

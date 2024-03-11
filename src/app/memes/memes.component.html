@@ -1,6 +1,8 @@
-<ng-container *ngIf="isLoading; else memes">
-  <app-shimmer [memesCount]="memesCount"></app-shimmer>
-</ng-container>
-<ng-template #memes>
-  <app-memes-body [memesData]="memesData"></app-memes-body>
-</ng-template>
+<div class="d-flex flex-wrap">
+  <ng-container *ngIf="memesData.length">
+    <app-memes-body [memesData]="memesData"></app-memes-body>
+  </ng-container>
+  <ng-container *ngIf="showShimmer">
+    <app-shimmer [memesCount]="memesCount"></app-shimmer>
+  </ng-container>
+</div>
