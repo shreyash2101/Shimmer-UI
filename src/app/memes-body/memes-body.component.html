@@ -4,5 +4,6 @@
     *ngFor="let memes of memesData?.memes"
   >
     <img style="width: 128px; height: 128px" [src]="memes.url" alt="" />
+    <p>{{ memes.author }}</p>
   </div>
 </div>

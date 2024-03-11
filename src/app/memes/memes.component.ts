@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './memes.component.scss',
 })
 export class MemesComponent implements OnInit {
-  memesCount = 15;
+  memesCount = 28;
   memesData: any;
   isLoading = true;
   ngOnInit(): void {
