@@ -11,6 +11,8 @@ import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionItemComponent } from './accordion-item/accordion-item.component';
+import { NestedCommentsComponent } from './nested-comments/nested-comments.component';
+import { CommentBoxComponent } from './comment-box/comment-box.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { AccordionItemComponent } from './accordion-item/accordion-item.componen
     LoginComponent,
     AccordionComponent,
     AccordionItemComponent,
+    NestedCommentsComponent,
+    CommentBoxComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
