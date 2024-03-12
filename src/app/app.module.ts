@@ -9,6 +9,8 @@ import { MemesBodyComponent } from './memes-body/memes-body.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AccordionComponent } from './accordion/accordion.component';
+import { AccordionItemComponent } from './accordion-item/accordion-item.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     MemesBodyComponent,
     AboutUsComponent,
     LoginComponent,
+    AccordionComponent,
+    AccordionItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
