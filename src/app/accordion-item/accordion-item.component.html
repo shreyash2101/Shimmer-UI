@@ -1,0 +1,10 @@
+<div>
+  <div
+    class="p-2 bg-warning d-flex justify-content-between border-bottom border-black"
+    (click)="clicked()"
+  >
+    <span>{{ title }}</span
+    ><span *ngIf="!isOpen">⬇️</span><span *ngIf="isOpen">⬆️</span>
+  </div>
+  <div *ngIf="isOpen">{{ description }}</div>
+</div>

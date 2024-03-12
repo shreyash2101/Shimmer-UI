@@ -1,0 +1,10 @@
+<div class="w-50 mt-2 m-auto border border-2 border-black">
+  <ng-container *ngFor="let data of accordionData; let i = index">
+    <app-accordion-item
+      [title]="data.title"
+      [description]="data.description"
+      [isOpen]="i === openIndex"
+      (setIsOpen)="setOpenIndex(i)"
+    ></app-accordion-item
+  ></ng-container>
+</div>
