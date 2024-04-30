@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-center m-2 align-items-center">
+  <img
+    class="arrow"
+    (click)="showPreviousImage()"
+    src="https://w7.pngwing.com/pngs/120/417/png-transparent-font-awesome-arrow-web-typography-computer-icons-left-arrow-cdr-angle-rectangle.png"
+    alt="left arrow"
+  />
+  <div class="d-flex justify-content-center image-container">
+    <img
+      class="carousel-image carousel-image-1"
+      [src]="images[getPreviousImage()]"
+      alt="Image Carousel"
+    />
+    <img
+      class="carousel-image"
+      [src]="images[currentImage]"
+      alt="Image Carousel"
+    />
+    <img
+      class="carousel-image carousel-image-1"
+      [src]="images[getNextImage()]"
+      alt="Image Carousel"
+    />
+  </div>
+  <img
+    class="arrow"
+    (click)="showNextImage()"
+    src="https://toppng.com/uploads/preview/right-arrow-icon-11549436728z3gizxwjqt.png"
+    alt="right arrow"
+  />
+</div>
