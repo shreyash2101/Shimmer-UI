@@ -1,0 +1,19 @@
+<div class="ps-4 comments" *ngFor="let comment of comments">
+  <div class="d-flex">
+    <div>
+      <img
+        class="p-1 profile-image rounded-circle"
+        src="https://www.redditstatic.com/avatars/defaults/v2/avatar_default_1.png"
+        alt="user-profile"
+      />
+    </div>
+    <div>
+      <div class="px-2 py-1 fw-bold">{{ comment.username }}</div>
+      <div class="px-2">{{ comment.comment }}</div>
+    </div>
+  </div>
+
+  <div *ngIf="comment?.replies">
+    <app-comment-box [comments]="comment?.replies"></app-comment-box>
+  </div>
+</div>

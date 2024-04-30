@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionItemComponent } from './accordion-item/accordion-item.component';
 import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
+import { NestedCommentsComponent } from './nested-comments/nested-comments.component';
+import { CommentBoxComponent } from './comment-box/comment-box.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { ImageCarouselComponent } from './image-carousel/image-carousel.componen
     AccordionComponent,
     AccordionItemComponent,
     ImageCarouselComponent,
+    NestedCommentsComponent,
+    CommentBoxComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
